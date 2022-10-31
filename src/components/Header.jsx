@@ -7,14 +7,32 @@ import {
   Button,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import styles from "../index";
+import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    backgroundColor: "#222222",
+  },
+  menuButtonOne: {
+    marginRight: "8px",
+  },
+  menuButtonTwo: {
+    color: "Lime",
+  },
+  toolBar: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+}));
+
 export const Header = () => {
+  const classes = useStyles();
+
   return (
-    <AppBar position="fixed">
+    <AppBar className={classes.appBar}>
       <Container fixed>
-        <Toolbar className="toolbar_style">
+        <Toolbar className={classes.toolBar}>
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
@@ -23,11 +41,15 @@ export const Header = () => {
             <Button
               color="inherit"
               variant="outlined"
-              style={{ marginRight: "10px" }}
+              className={classes.menuButtonOne}
             >
               Log In
             </Button>
-            <Button color="inherit" variant="outlined">
+            <Button
+              color="inherit"
+              variant="outlined"
+              className={classes.menuButtonTwo}
+            >
               Sign Up
             </Button>
           </Box>
