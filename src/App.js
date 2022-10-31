@@ -1,12 +1,15 @@
 import { Header } from "./components/Header";
-import { MainPage } from "./components/MainPage";
+import { UnderHeader } from "./components/UnderHeader";
+import styles from "./index.css";
 
 function App() {
   return (
-    <div>
+    <>
       <Header></Header>
-      <MainPage></MainPage>
-    </div>
+      <hr className="hr_style"></hr>
+      <UnderHeader></UnderHeader>
+      <hr className="hr_style"></hr>
+    </>
   );
 }
 export default App;

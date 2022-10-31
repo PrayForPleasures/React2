@@ -9,13 +9,16 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import backImg from "../imgs/greyback.jpg";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#222222",
+    backgroundImage: `url(${backImg})`,
+    position: "static",
   },
   menuButtonOne: {
     marginRight: "8px",
+    color: "whitesmoke",
   },
   menuButtonTwo: {
     color: "Lime",
