@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { UnderHeader } from "./components/UnderHeader";
+import { MainContent } from "./components/MainContent";
 import styles from "./index.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <hr className="hr_style"></hr>
       <UnderHeader></UnderHeader>
       <hr className="hr_style"></hr>
+      <MainContent></MainContent>
     </>
   );
 }

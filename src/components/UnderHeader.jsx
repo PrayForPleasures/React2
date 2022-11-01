@@ -1,12 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Button,
-  Container,
-  Typography,
-  Box,
-  Paper,
-  Grid,
-} from "@material-ui/core";
+import { Button, Container, Typography, Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import backImg from "../imgs/greyback.jpg";
 
@@ -35,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   secondText: {
     marginBottom: "16px",
+    color: "whitesmoke",
   },
   mainContent: {},
 }));
