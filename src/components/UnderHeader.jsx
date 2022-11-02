@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button, Container, Typography, Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import backImg from "../imgs/greyback.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainFeatures: {
     position: "relative",
     color: "whitesmoke",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
   },
   mainFeaturesPosts: {
     position: "relative",
@@ -21,10 +17,18 @@ const useStyles = makeStyles((theme) => ({
     color: "whitesmoke",
     width: "100px",
     marginRight: "8px",
+    "&:hover": {
+      transition: "0.3s",
+      transform: "scale(1.1)",
+    },
   },
   buttonTwo: {
     color: "lime",
     width: "100px",
+    "&:hover": {
+      transition: "0.3s",
+      transform: "scale(1.1)",
+    },
   },
   secondText: {
     marginBottom: "16px",
@@ -39,10 +43,7 @@ export const UnderHeader = () => {
 
   return (
     <>
-      <Box
-        className={classes.mainFeatures}
-        style={{ backgroundImage: `url(${backImg})`, paddingBottom: "8px" }}
-      >
+      <Box className={classes.mainFeatures} style={{ paddingBottom: "8px" }}>
         <Container fixed>
           <Grid container>
             <Grid item md={6}>

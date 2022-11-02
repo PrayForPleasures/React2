@@ -9,19 +9,26 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import backImg from "../imgs/greyback.jpg";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundImage: `url(${backImg})`,
     position: "static",
+    backgroundColor: "transparent",
   },
   menuButtonOne: {
     marginRight: "8px",
     color: "whitesmoke",
+    "&:hover": {
+      transition: "0.3s",
+      transform: "scale(1.1)",
+    },
   },
   menuButtonTwo: {
     color: "Lime",
+    "&:hover": {
+      transition: "0.3s",
+      transform: "scale(1.1)",
+    },
   },
   toolBar: {
     display: "flex",
@@ -39,7 +46,9 @@ export const Header = () => {
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6">Try to MUI</Typography>
+          <Typography className="borderActive" variant="h6">
+            Try to MUI
+          </Typography>
           <Box>
             <Button
               color="inherit"

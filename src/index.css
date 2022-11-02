@@ -6,9 +6,42 @@
 
 .hr_style {
   height: 3px;
-  background-color: #222222;
   border-bottom: 1px solid whitesmoke;
   border-left: 0px;
   border-right: 0px;
   border-top: 1px solid whitesmoke;
+}
+
+.borderActive {
+  width: 134px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, lime 100%, lime 100%),
+    linear-gradient(to bottom, transparent 100%, transparent 100%),
+    linear-gradient(to right, lime 100%, lime 100%),
+    linear-gradient(to bottom, transparent 100%, transparent 100%);
+  opacity: 0.9;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  animation: animBorderActive 8s cubic-bezier(0.2, 0.3, 0.2, 0.3) infinite;
+}
+
+@keyframes animBorderActive {
+  0% {
+    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
+  }
+  25% {
+    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 1px, 1px 0;
+  }
+  75% {
+    background-size: 100% 3px, 3px 100%, 100% 1px, 1px 0;
+  }
+  100% {
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  }
 }
