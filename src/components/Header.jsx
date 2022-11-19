@@ -43,7 +43,12 @@ export const Header = () => {
     <AppBar className={classes.appBar}>
       <Container fixed>
         <Toolbar className={classes.toolBar}>
-          <IconButton edge="start" color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            style={{ marginRight: "6%" }}
+          >
             <MenuIcon />
           </IconButton>
           <Typography className="borderActive" variant="h6">
