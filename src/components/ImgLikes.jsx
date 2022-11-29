@@ -1,6 +1,5 @@
-import styles from "../index";
 import { makeStyles } from "@material-ui/core/styles";
-import img from "../imgs/grlimered.jpg";
+import imgFront from "../imgs/grlimered.jpg";
 import { Container } from "@material-ui/core";
 import { connect } from "react-redux";
 import { incrementLikes, decrementLikes } from "../store/actions";
@@ -73,7 +72,7 @@ const ImgLikes = (props) => {
   return (
     <Container className={classes.container} maxWidth="md">
       <div className={classes.imgDiv}>
-        <img className={classes.imgLikes} src={img} alt="photo" />
+        <img className={classes.imgLikes} src={imgFront} alt="image" />
         <div className={classes.buttonDiv}>
           <button onClick={props.onIncrementLikes} className={classes.like}>
             &#10084;

@@ -2,7 +2,6 @@ import { Header } from "./components/Header";
 import { UnderHeader } from "./components/UnderHeader";
 import { MainContent } from "./components/MainContent";
 import { Footer } from "./components/Footer";
-import styles from "./index.css";
 import { makeStyles } from "@material-ui/core/styles";
 import backImg from "./imgs/grlime.jpg";
 import ImgLikes from "./components/ImgLikes";
@@ -37,7 +36,7 @@ function App() {
         <Header></Header>
         <hr className="hr_style"></hr>
         <SimpleBreadcrumbs></SimpleBreadcrumbs>
-        <hr className="hr_style"></hr>
+
         <UnderHeader></UnderHeader>
         <hr className="hr_style"></hr>
         <MainContent></MainContent>

@@ -36,12 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function handleClick(event) {
-  event.preventDefault();
-}
-
-export const Header = () => {
+export const Header = (props) => {
   const classes = useStyles();
+
+  function handleClick(event) {
+    event.preventDefault();
+    console.log(event.target);
+  }
 
   return (
     <AppBar className={classes.appBar}>

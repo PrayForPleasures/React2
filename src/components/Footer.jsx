@@ -7,7 +7,6 @@ import FolderIcon from "@material-ui/icons/Folder";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import styles from "../index";
 
 const useStyles = makeStyles((theme) => ({
   bmNav: {

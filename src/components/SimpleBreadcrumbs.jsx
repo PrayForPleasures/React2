@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import { Container } from "@material-ui/core";
@@ -20,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   breadcrumbs: {
-    display: "flex",
     justifyContent: "center",
   },
 }));
@@ -29,30 +27,37 @@ export function SimpleBreadcrumbs() {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Breadcrumbs className={classes.breadcrumbs} aria-label="breadcrumb">
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10102; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10103; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10104; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10105; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10106; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10107; Page
-        </Link>
-        <Link className={classes.linkStyle} href="#" onClick={handleClick}>
-          &#10108; Page
-        </Link>
-      </Breadcrumbs>
-    </Container>
+    <>
+      <Container>
+        <Breadcrumbs
+          style={{ display: "flex" }}
+          className={classes.breadcrumbs}
+          aria-label="breadcrumb"
+        >
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10102; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10103; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10104; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10105; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10106; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10107; Page
+          </Link>
+          <Link className={classes.linkStyle} href="#" onClick={handleClick}>
+            &#10108; Page
+          </Link>
+        </Breadcrumbs>
+      </Container>
+      <hr className="hr_style"></hr>
+    </>
   );
 }
