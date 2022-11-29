@@ -9,6 +9,8 @@ import ImgLikes from "./components/ImgLikes";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { reducers } from "./store/reducers";
+import { SimpleBreadcrumbs } from "./components/SimpleBreadcrumbs";
+// import { nanoid } from "nanoid";
 
 const store = createStore(reducers);
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+  },
+  aButton: {
+    color: "whitesmoke",
+    textDecoration: "none",
   },
 }));
 
@@ -27,12 +33,18 @@ function App() {
         className={classes.mainFeatures}
         style={{ backgroundImage: `url(${backImg})`, paddingBottom: "8px" }}
       >
+        <hr className="hr_style"></hr>
         <Header></Header>
         <hr className="hr_style"></hr>
-        <ImgLikes></ImgLikes>
+        <SimpleBreadcrumbs></SimpleBreadcrumbs>
+        <hr className="hr_style"></hr>
         <UnderHeader></UnderHeader>
         <hr className="hr_style"></hr>
         <MainContent></MainContent>
+        <hr className="hr_style"></hr>
+        <div style={{ display: "flex" }}>
+          <ImgLikes></ImgLikes>
+        </div>
         <hr className="hr_style"></hr>
         <Footer></Footer>
         <hr className="hr_style"></hr>

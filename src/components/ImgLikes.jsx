@@ -3,12 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import img from "../imgs/grlimered.jpg";
 import { Container } from "@material-ui/core";
 import { connect } from "react-redux";
+import { incrementLikes, decrementLikes } from "../store/actions";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     justifyContent: "center",
     marginTop: "24px",
+    marginBottom: "24px",
   },
   imgDiv: {
     width: "200px",
@@ -73,10 +75,10 @@ const ImgLikes = (props) => {
       <div className={classes.imgDiv}>
         <img className={classes.imgLikes} src={img} alt="photo" />
         <div className={classes.buttonDiv}>
-          <button onClick={props.incrementLikes} className={classes.like}>
+          <button onClick={props.onIncrementLikes} className={classes.like}>
             &#10084;
           </button>
-          <button onClick={props.decrementLikes} className={classes.dislike}>
+          <button onClick={props.onDecrementLikes} className={classes.dislike}>
             &#9785;
           </button>
         </div>
@@ -97,13 +99,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incrementLikes: () => {
-      const action = { type: "INCREMENT" };
-      dispatch(action);
+    onIncrementLikes: () => {
+      return dispatch(incrementLikes());
     },
-    decrementLikes: () => {
-      const action = { type: "DECREMENT" };
-      dispatch(action);
+    onDecrementLikes: () => {
+      return dispatch(decrementLikes());
     },
   };
 };

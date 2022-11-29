@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function handleClick(event) {
+  event.preventDefault();
+}
+
 export const Header = () => {
   const classes = useStyles();
 
@@ -47,10 +51,11 @@ export const Header = () => {
             edge="start"
             color="inherit"
             aria-label="menu"
-            style={{ marginRight: "6%" }}
+            style={{ marginRight: "5%" }}
           >
-            <MenuIcon />
+            <MenuIcon onClick={handleClick} />
           </IconButton>
+
           <Typography className="borderActive" variant="h6">
             Try to MUI
           </Typography>
