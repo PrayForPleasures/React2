@@ -8,6 +8,9 @@ import ImgLikes from "./components/ImgLikes";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { reducers } from "./store/reducers";
+import { Checkeds } from "./components/Checkeds";
+import { Users } from "./components/Users";
+
 import { SimpleBreadcrumbs } from "./components/SimpleBreadcrumbs";
 // import { nanoid } from "nanoid";
 
@@ -36,7 +39,8 @@ function App() {
         <Header></Header>
         <hr className="hr_style"></hr>
         <SimpleBreadcrumbs></SimpleBreadcrumbs>
-
+        <Checkeds></Checkeds>
+        <hr className="hr_style"></hr>
         <UnderHeader></UnderHeader>
         <hr className="hr_style"></hr>
         <MainContent></MainContent>
@@ -44,6 +48,8 @@ function App() {
         <div style={{ display: "flex" }}>
           <ImgLikes></ImgLikes>
         </div>
+        <hr className="hr_style"></hr>
+        <Users></Users>
         <hr className="hr_style"></hr>
         <Footer></Footer>
         <hr className="hr_style"></hr>

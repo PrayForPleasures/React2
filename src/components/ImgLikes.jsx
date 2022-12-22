@@ -91,7 +91,7 @@ const ImgLikes = (props) => {
     <Container className={classes.container} maxWidth="md">
       <div className={classes.imgDiv}>
         <img className={classes.imgLikes} src={imgFront} alt="img" />
-        <div className={classes.divForInput}>
+        <form className={classes.divForInput}>
           <Input
             disableUnderline={true}
             placeholder="Your Comment Should Be Here"
@@ -99,7 +99,7 @@ const ImgLikes = (props) => {
             type="text"
             onChange={handleChange}
           />
-        </div>
+        </form>
 
         <div className={classes.buttonDiv}>
           <button onClick={props.onIncrementLikes} className={classes.like}>

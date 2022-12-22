@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
   breadcrumbs: {
     justifyContent: "center",
   },
+  underBread: {
+    color: "whitesmoke",
+    textAlign: "center",
+  },
 }));
 
 export function SimpleBreadcrumbs() {
